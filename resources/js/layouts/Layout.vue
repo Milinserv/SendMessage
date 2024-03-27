@@ -37,20 +37,32 @@ const dropdown = () => {
                     </div>
                 </span>
                 <div class="text-left text-sm mt-2 mx-auto text-left" id="submenu">
-                    <Link class="cursor-pointer hover:bg-white rounded-md mt-1" href="/analytics">Home</Link>
-                    <h1 class="cursor-pointer hover:bg-white rounded-md mt-1">
-                        <Link href="/analytics">Home</Link>
-<!--                        <span class="pl-10">Аналитика</span>-->
-                    </h1>
-                    <h1 class="cursor-pointer hover:bg-white rounded-md mt-1">
-                        <span class="pl-10">Клиенты</span>
-                    </h1>
-                    <h1 class="cursor-pointer hover:bg-white rounded-md mt-1">
-                        <span class="pl-10">Рассылка</span>
-                    </h1>
+                    <Link class="" href="/">
+                        <div class="cursor-pointer hover:bg-white rounded-md mt-1">
+                            <span class="pl-10">Аналитика</span>
+                        </div>
+                    </Link>
+                    <Link class="" href="/clients">
+                        <div class="cursor-pointer hover:bg-white rounded-md mt-1">
+                            <span class="pl-10">Клиенты</span>
+                        </div>
+                    </Link>
+                    <Link class="" href="/mailings">
+                        <div class="cursor-pointer hover:bg-white rounded-md mt-1">
+                            <span class="pl-10">Рассылка</span>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </aside>
+        <div class="pl-72 h-20 border border-bottom content-center">
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <button type="button" class="text-gray-900 bg-white border border-gray-300
+                 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium
+                 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white
+                 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Дома под ключ</button>
+            </div>
+        </div>
         <article>
             <slot />
         </article>

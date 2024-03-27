@@ -9,10 +9,14 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return Inertia::render('TheHome');
-    }
-    public function analytics()
-    {
         return Inertia::render('AnalyticsPage');
+    }
+    public function clients()
+    {
+        return Inertia::render('ClientsPage');
+    }
+    public function mailings()
+    {
+        return Inertia::render('MailingsPage');
     }
 }
