@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('Analytics');
-Route::get('/clients', [HomeController::class, 'clients'])->name('Clients');
-Route::get('/mailings', [HomeController::class, 'mailings'])->name('Mailings');
+Route::get('/', [HomeController::class, 'index'])->name('analytics');
+Route::get('/clients', [HomeController::class, 'clients'])->name('clients');
+Route::get('/mailings', [HomeController::class, 'mailings'])->name('mailings');
+
+Route::prefix('client')->group(function () {
+    Route::post('/store', [ClientController::class, 'store']);
+});
