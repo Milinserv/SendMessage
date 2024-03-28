@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('sms_campaign_records', function (Blueprint $table) {
             $table->id();
             $table->string('mailing_name');
+            $table->text('mailing_text');
             $table->json('recipient_id');
             $table->timestamps();
         });
