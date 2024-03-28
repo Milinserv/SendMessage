@@ -2,7 +2,7 @@ import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import Layout from './layouts/Layout.vue'
 import PrimeVue from 'primevue/config';
-import 'primevue/resources/themes/aura-light-green/theme.css'
+import 'primevue/resources/themes/aura-light-blue/theme.css'
 
 createInertiaApp({
     resolve: name => {
