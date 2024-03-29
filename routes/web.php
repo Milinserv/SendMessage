@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MailingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,4 +22,8 @@ Route::get('/mailings', [HomeController::class, 'mailings'])->name('mailings');
 
 Route::prefix('client')->group(function () {
     Route::post('/store', [ClientController::class, 'store']);
+});
+
+Route::prefix('mailing')->group(function (){
+    Route::post('/add', [MailingController::class, 'store']);
 });
