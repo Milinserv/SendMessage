@@ -24,6 +24,25 @@ let props = defineProps({
     }
 });
 
+let tableHeaders = [
+    {
+        id: 1,
+        name: 'Название'
+    },
+    {
+        id: 2,
+        name: 'Телефон'
+    },
+    {
+        id: 3,
+        name: 'Email'
+    },
+    {
+        id: 4,
+        name: 'День рождения'
+    },
+];
+
 </script>
 
 <template>
@@ -56,7 +75,7 @@ let props = defineProps({
                            placeholder="Поиск и фильтр">
                 </div>
             </div>
-            <TableComponent :clients="clients" />
+            <TableComponent :clients="clients" :table-headers="tableHeaders" />
         </div>
     </div>
 </template>

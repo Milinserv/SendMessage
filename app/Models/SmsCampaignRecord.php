@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class SmsCampaignRecord extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'mailing_name',
+        'mailing_text',
+        'recipient_id',
+        'mailing_period',
+        'mailing_period_time'
+    ];
 }

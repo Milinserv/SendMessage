@@ -3,17 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Data\ClientData;
+use App\Data\SmsCampaignRecordData;
 use App\Models\Guest;
-use Illuminate\Http\Request;
+use App\Models\SmsCampaignRecord;
 use Inertia\Inertia;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $clients = ClientData::collect(Guest::all());
+        $mailings = SmsCampaignRecord::all();
 
-        return Inertia::render('AnalyticsPage');
+        return Inertia::render('AnalyticsPage', [
+            'mailings' => $mailings
+        ]);
     }
     public function clients()
     {
@@ -24,6 +27,9 @@ class HomeController extends Controller
     }
     public function mailings()
     {
-        return Inertia::render('MailingsPage');
+        $clients = ClientData::collect(Guest::all());
+        return Inertia::render('MailingsPage', [
+            'clients' => $clients
+        ]);
     }
 }
