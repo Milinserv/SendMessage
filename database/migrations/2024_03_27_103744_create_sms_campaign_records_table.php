@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('mailing_name');
             $table->text('mailing_text');
-            $table->json('recipient_id');
+            $table->string('recipient_id');
+            $table->string('mailing_period');
+            $table->json('mailing_period_time');
             $table->timestamps();
         });
     }
